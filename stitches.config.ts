@@ -56,12 +56,9 @@ export const { styled, css, createTheme, keyframes, globalCss, getCssText } =
       }),
       equallyGridColumn: (column: number) => ({
         display: "grid",
-        gridTemplateColumns: `repeat(${column}, minmax(0, 1fr))`,
+        gridTemplateColumns: `repeat(auto-fit, minmax(calc(100% / ${column}), 1fr))`,
       }),
-      equallyGridRow: (row: number) => ({
-        display: "grid",
-        gridTemplateRows: `repeat(${row}, minmax(0, 1fr))`,
-      }),
+
       remFont: (pixel: number) => ({
         fontSize: calcSpaces(pixel),
       }),
@@ -75,7 +72,9 @@ export const { styled, css, createTheme, keyframes, globalCss, getCssText } =
       bp2: "(min-width: 1200px)",
     },
     theme: {
-      colors: {},
+      colors: {
+        primary: "hsl(234,32%,17%)",
+      },
       space: spaces,
     },
   });

@@ -11,6 +11,7 @@ export default class RequestServices {
 
     this.reqClient = axios.create({
       headers: requestHeader,
+      baseURL: process.env.NEXT_PUBLIC_API_ENDPOINT,
     });
 
     this.reqClient.interceptors.response.use(

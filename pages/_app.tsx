@@ -31,17 +31,23 @@ export default function App({ Component, pageProps }: AppProps) {
           }
           body {
             color: white;
-            background: hsl(240, 32, 9);
+            background: hsl(240, 32%, 9%);
+          }
+        }
+        @media not all and (min-resolution: 0.001dpcm) {
+          img[loading="lazy"] {
+            clip-path: inset(0.5px);
           }
         }
       `}</style>
-      <ReactQueryConfig>
-        <Seo>
+
+      <Seo>
+        <ReactQueryConfig>
           <RootLayout>
             <Component {...pageProps} />
           </RootLayout>
-        </Seo>
-      </ReactQueryConfig>
+        </ReactQueryConfig>
+      </Seo>
     </>
   );
 }

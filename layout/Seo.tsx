@@ -19,8 +19,8 @@ function Seo({ title, description, image, children }: SeoProperties) {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
