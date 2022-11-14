@@ -27,7 +27,7 @@ const TodaysForecastCard = ({
           sizes="(max-width: 768px) 100vw,
           (max-width: 1200px) 50vw,
           33vw"
-          src={`http://openweathermap.org/img/wn/${todayForecast[lastIndex].weather[0].icon}@2x.png`}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_ENDPOINT}${todayForecast[lastIndex].weather[0].icon}@2x.png`}
           alt={todayForecast[lastIndex].weather[0].main}
         />
       </ImageFigure>
