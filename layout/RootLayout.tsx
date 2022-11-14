@@ -6,12 +6,12 @@ type RootLayoutProps = { children: ReactNode };
 const Wrapper = styled("div", {
   flexing: "column",
   justifyContent: "flex-start",
-  minHeight: "100vh",
-  overflow: "hidden auto",
+  height: "100vh",
   "@bp1": {
-    // maxWidth: "90rem",
     margin: "0 auto",
-    overflow: "auto",
+  },
+  "@bp2": {
+    overflow: "hidden",
   },
 });
 
