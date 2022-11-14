@@ -9,4 +9,5 @@ export interface Parameters {
   lon: number;
   limit: number;
   units: "standard" | "metric" | "imperial";
+  search?: string;
 }

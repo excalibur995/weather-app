@@ -74,6 +74,7 @@ export const { styled, css, createTheme, keyframes, globalCss, getCssText } =
     theme: {
       colors: {
         primary: "hsl(234,32%,17%)",
+        neutral: "#ffffff",
       },
       space: spaces,
     },

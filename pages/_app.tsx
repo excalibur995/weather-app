@@ -1,8 +1,10 @@
-import { Inter } from "@next/font/google";
-import type { AppProps } from "next/app";
 import RootLayout from "layout/RootLayout";
 import ReactQueryConfig from "drivers/react-query/ReactQueryConfig";
 import Seo from "layout/Seo";
+import { Inter } from "@next/font/google";
+import type { AppProps } from "next/app";
+import "react-modern-drawer/dist/index.css";
+
 const inter = Inter();
 
 export default function App({ Component, pageProps }: AppProps) {
