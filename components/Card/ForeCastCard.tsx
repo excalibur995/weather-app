@@ -59,7 +59,7 @@ const ForeCastCard = ({
         <Image
           width={118}
           height={100}
-          src={`http://openweathermap.org/img/wn/${list?.weather[0].icon}@2x.png`}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_ENDPOINT}${list?.weather[0].icon}@2x.png`}
           alt={list?.weather[0]?.main ?? "Weather Icon"}
         />
       </ImageFigure>

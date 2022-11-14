@@ -23,19 +23,6 @@ export const { styled, css, createTheme, keyframes, globalCss, getCssText } =
         marginLeft: value,
         marginRight: value,
       }),
-      my: (value: string | number) => ({
-        marginTop: value,
-        marginBottom: value,
-      }),
-      px: (value: string | number) => ({
-        paddingRight: value,
-        paddingLeft: value,
-      }),
-      py: (value: string | number) => ({
-        paddingTop: value,
-        paddingBottom: value,
-      }),
-
       flexing: (dir: "column" | "row" | "row-center" | "column-center") => {
         if (dir.includes("-center")) {
           return {
@@ -58,16 +45,13 @@ export const { styled, css, createTheme, keyframes, globalCss, getCssText } =
         display: "grid",
         gridTemplateColumns: `repeat(auto-fit, minmax(calc(100% / ${column}), 1fr))`,
       }),
-
-      remFont: (pixel: number) => ({
-        fontSize: calcSpaces(pixel),
-      }),
       size: (value: number | string) => ({
         width: value,
         height: value,
       }),
     },
     media: {
+      bp0: "(max-width:360px)",
       bp1: "(min-width: 768px)",
       bp2: "(min-width: 1200px)",
     },

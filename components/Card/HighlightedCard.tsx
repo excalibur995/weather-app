@@ -8,8 +8,11 @@ type HighlightedCardProps = {
 };
 const Wrapper = styled("div", {
   width: "inherit",
-  equallyGridColumn: 2.5,
   gap: "$8",
+  equallyGridColumn: 2.5,
+  "@bp0": {
+    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+  },
 });
 
 const WrapperCard = styled("div", {
